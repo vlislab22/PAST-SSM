@@ -57,7 +57,7 @@
                     </li>
 
                     <li>
-			<img src="./image/leizhang.png" height="80px"><br>
+			<img src="./image/leizhang.jpg" height="80px"><br>
                         <a href="https://www.leizhang.org/" >
                            Lei Zhang
                         </a>
@@ -66,7 +66,7 @@
                     </li>
                   
                     <li>
-                        <img src="./images/Addision.png" height="80px"><br>
+                        <img src="./images/linwang.png" height="80px"><br>
                         <a href="https://addisonwang2013.github.io/vlislab/linwang.html">
                             Addison Lin Wang
                         </a>
@@ -135,12 +135,18 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-		   	In this paper, we propose <strong>EventBind</strong>, a novel and effective framework that unleashes the potential of vision-language models (VLMs) for event-based recognition to compensate for the lack of large-scale event-based datasets. 
-In particular, due to the distinct modality gap with the image-text data and the lack of large-scale datasets, learning a common representation space for images, texts, and events is non-trivial.  
-Intuitively, we need to address two key challenges: 1) how to generalize CLIP's visual encoder to event data while fully leveraging events' unique properties, e.g., sparsity and high temporal 
-resolution; 2) how to effectively align the multi-modal embeddings, i.e., image, text, and events. 
-Accordingly, we first introduce a novel event encoder that subtly models the temporal information from events and meanwhile generates event prompts for modality bridging. We then design a text encoder that generates content prompts and utilizes hybrid text prompts to enhance EventBind's generalization ability across diverse datasets.
-With the proposed event encoder, text encoder, and image encoder, a novel Hierarchical Triple Contrastive Alignment <strong>HTCA</strong> module is introduced to jointly optimize the correlation and enable efficient knowledge transfer among the three modalities. We evaluate various settings, including fine-tuning and few-shot on three benchmarks and our EventBind achieves new state-of-art accuracy compared with the previous methods, such as on N-Caltech101(+5.34% and +1.70%) and N-Imagenet(+5.65% and +1.99%) with fine-tuning and 20-shot settings respectively. Moreover, our EventBind can be flexibly extended to the event retrieval task using text or image queries, showing plausible performance.
+		   	Event cameras are bio-inspired sensors that capture the intensity changes asynchronously and output event streams with distinct advantages, such as high temporal resolution. 
+To exploit event cameras for object/action recognition, existing methods predominantly sample and aggregate events in a second-level duration at every fixed temporal interval (or frequency).
+However, they often face difficulties in capturing the spatiotemporal relationships for longer, e.g., minute-level, events and generalizing across varying temporal frequencies. 
+To fill the gap, we present a novel framework, dubbed PAST-SSM, exhibiting superior capacity in recognizing events of arbitrary duration e.g., 0.1s to 4.5min and generalizing to varying inference frequencies.
+Our key insight is to learn the spatiotemporal relationships from the encoded event features via the state space model (SSM) -- whose linear complexity makes it ideal for modeling high temporal resolution events with longer sequences. 
+To achieve this goal, we first propose a Path-Adaptive Event Aggregation and Scan (PEAS) module to encode events of varying duration into features with fixed dimensions by adaptively scanning and selecting aggregated event frames. 
+On top of PEAS, we introduce a novel Multi-faceted Selection Guiding (MSG) loss to minimize the randomness and redundancy of the encoded features. This subtly enhances the model generalization across different inference frequencies. 
+Lastly, the SSM is employed to better learn the spatiotemporal properties from the encoded features. 
+Moreover, we build a minute-level event-based recognition dataset, named ArDVS100, with arbitrary duration for the benefit of the community. 
+Extensive experiments prove that our method outperforms prior arts by +3.45%, +0.38% and +8.31% on the DVS Action, SeAct, and HARDVS datasets, respectively. 
+In addition, it achieves an accuracy of 97.35%, 89.00%, and 100.00% in our ArDVS100, TemArDVS100, and Real-ArDVS10 datasets respectively with the duration from 1s to 265s. 
+Our method also shows strong generalization with a maximum accuracy drop of only 8.62% for varying inference frequencies while the baseline's drop reaches 27.59%.
                 </p>
             </div>
         </div>
@@ -152,9 +158,9 @@ With the proposed event encoder, text encoder, and image encoder, a novel Hierar
      <div class="row">     
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                Overall framework of our EventBind.
+                Overall framework of our PAST-SSM
             </h3>
-            <img src="./image/eventbind_framework.png" class="img-responsive" alt="vis_res"  class="center" >
+            <img src="./image/framework.png" class="img-responsive" alt="vis_res"  class="center" >
       	</div>
     </div>
 <!-- ####      <div class="col-md-8 col-md-offset-2">
@@ -209,10 +215,10 @@ With the proposed event encoder, text encoder, and image encoder, a novel Hierar
                     <div class="col py-3">
                         <pre class="border">             
 @article{zhou2023clip,
-  title={EventBind: Learning a Unified Representation to Bind Them All for Event-based Open-world Understanding},
-  author={Zhou, Jiazhou and Zheng, Xu and Lyu, Yuanhuiyi and Wang, Lin},
+  title={Path-adaptive Spatio-Temporal State Space Model for Event-based Recognition with Arbitrary Duration},
+  author={Zhou, Jiazhou and Kanghao, Chen and Lei, Zhang and Wang, Lin},
   journal={arXiv preprint arXiv:2308.03135},
-  year={2023}
+  year={2024}
 }
 </pre>
                     </div>
