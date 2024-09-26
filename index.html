@@ -37,7 +37,7 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-			<img src="./image/jiazhou.jpg" height="80px"><br>
+			<img src="./images/jiazhou.jpg" height="80px"><br>
                         <a href="https://jiazhou-garland.github.io/" >
                          Jiazhou Zhou
                         </a>
@@ -59,7 +59,7 @@
                     </li>
 
                     <li>
-			<img src="./image/leizhang.jpg" height="80px"><br>
+			<img src="./images/leizhang.jpg" height="80px"><br>
                         <a href="https://www.leizhang.org/" >
                            Lei Zhang
                         </a>
@@ -88,26 +88,26 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
 			    <a href="https://arxiv.org/pdf/2308.03135.pdf">
-                            <img src="./image/arxiv.png" height="100px"><br>
+                            <img src="./images/arxiv.png" height="100px"><br>
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
 
-                            <img src="./image/youtube_icon.jpg" height="100px"><br>
+                            <img src="./images/youtube_icon.jpg" height="100px"><br>
                                 <h4><strong>Video</strong></h4>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/jiazhou-garland/E-CLIP">
-                            <img src="./image/github_icon.jpg" height="100px"><br>
+                            <img src="./images/github_icon.jpg" height="100px"><br>
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li>
 
                         <!-- <li>
                             
-                            <img src="./image/colab_icon.jpg" height="100px"><br>
+                            <img src="./images/colab_icon.jpg" height="100px"><br>
                                 <h4><strong>Colab</strong></h4>
                             </a>
                         </li> -->
@@ -115,13 +115,13 @@
 
                         <li>
                             <a href="https://github.com/jiazhou-garland/ELIP/blob/master/Appendix.pdf">
-                            <img src="./image/slide_icon.jpg" height="100px"><br>
+                            <img src="./images/slide_icon.jpg" height="100px"><br>
                                 <h4><strong>Supp</strong></h4>
                             </a>
                         </li>                     
                         <li>
                             <a href="https://vlislab22.github.io/vlislab/">
-                            <img src="./image/lab_logo.png" height="100px"><br>
+                            <img src="./images/lab_logo.png" height="100px"><br>
                                 <h4><strong>Vlislab</strong></h4>
                             </a>
                         </li>                       
@@ -138,10 +138,10 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-		   	Event cameras are bio-inspired sensors that capture the intensity changes asynchronously and output event streams with distinct advantages, such as high temporal resolution. 
+Event cameras are bio-inspired sensors that capture the intensity changes asynchronously and output event streams with distinct advantages, such as high temporal resolution. 
 To exploit event cameras for object/action recognition, existing methods predominantly sample and aggregate events in a second-level duration at every fixed temporal interval (or frequency).
 However, they often face difficulties in capturing the spatiotemporal relationships for longer, e.g., minute-level, events and generalizing across varying temporal frequencies. 
-To fill the gap, we present a novel framework, dubbed PAST-SSM, exhibiting superior capacity in recognizing events of arbitrary duration e.g., 0.1s to 4.5min and generalizing to varying inference frequencies.
+To fill the gap, we present a novel framework, dubbed PAST-SSM, exhibiting superior capacity in recognizing events of arbitrary duration e.g., 0.1s to 4.5min, and generalizing to varying inference frequencies.
 Our key insight is to learn the spatiotemporal relationships from the encoded event features via the state space model (SSM) -- whose linear complexity makes it ideal for modeling high temporal resolution events with longer sequences. 
 To achieve this goal, we first propose a Path-Adaptive Event Aggregation and Scan (PEAS) module to encode events of varying duration into features with fixed dimensions by adaptively scanning and selecting aggregated event frames. 
 On top of PEAS, we introduce a novel Multi-faceted Selection Guiding (MSG) loss to minimize the randomness and redundancy of the encoded features. This subtly enhances the model generalization across different inference frequencies. 
@@ -149,7 +149,7 @@ Lastly, the SSM is employed to better learn the spatiotemporal properties from t
 Moreover, we build a minute-level event-based recognition dataset, named ArDVS100, with arbitrary duration for the benefit of the community. 
 Extensive experiments prove that our method outperforms prior arts by +3.45%, +0.38% and +8.31% on the DVS Action, SeAct, and HARDVS datasets, respectively. 
 In addition, it achieves an accuracy of 97.35%, 89.00%, and 100.00% in our ArDVS100, TemArDVS100, and Real-ArDVS10 datasets respectively with the duration from 1s to 265s. 
-Our method also shows strong generalization with a maximum accuracy drop of only 8.62% for varying inference frequencies while the baseline's drop reaches 27.59%.
+Our method also shows strong generalization with a maximum accuracy drop of only 8.62% for varying inference frequencies while the baseline drop reaches 27.59%.
                 </p>
             </div>
         </div>
